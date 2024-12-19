@@ -1,0 +1,102 @@
+/* Define color variables */
+:root {
+    --gold: #FFD700; /* Gold color */
+    --dark-brown: #4B3D2C; /* Dark brown */
+    --light-gold: #FFC300; /* Light gold for hover */
+    --black: #000000; /* Pure black background */
+    --form-background: rgba(30, 30, 30, 0.9); /* Dark form background */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--black); /* Solid black background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 500px; /* Increased form width */
+    margin: 50px auto;
+    padding: 40px; /* Increased padding */
+    background: var(--form-background);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2); /* Gold-tinted shadow */
+}
+
+h1 {
+    text-align: center;
+    color: var(--gold);
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+input[type=text], 
+input[type=email], 
+input[type=password], 
+input[type=tel], 
+input[type=date], 
+select, 
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: rgba(50, 50, 50, 0.8);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+input[type=text]:focus, 
+input[type=email]:focus, 
+input[type=password]:focus, 
+input[type=tel]:focus, 
+input[type=date]:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--gold);
+    color: var(--black);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--light-gold);
+    transform: scale(1.02);
+}
+
+/* Placeholder color for dark theme */
+::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
